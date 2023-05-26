@@ -4,7 +4,7 @@ import { Home } from "@models/Home"
 
 export default class HomeController implements Crud {
 //Create
-    async create (req: Request, res : Response){
+    async create(req: Request, res: Response){
         const{title, subtitle} = req.body
 
         const isAnyUndefined = Citi.areValuesUndefined(title, subtitle)
@@ -20,7 +20,7 @@ export default class HomeController implements Crud {
 //Read
     async get(req:Request, res:Response){
         const{ httpStatus, values:Homes } = await Citi.getAll(Home)
-        return Response.status(httpStatus).send({ Homes })
+        return res.status(httpStatus).send({ Homes })
     }
 //Update
     async update(req: Request, res: Response){
