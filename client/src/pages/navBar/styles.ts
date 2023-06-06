@@ -4,12 +4,17 @@ import styled from 'styled-components';
 export const NavBarContainer = styled.div`
   display:flex;
   position: absolute;
-  width: 1366px;
+  width: 100%;
   height: 130px;
-  left: calc(50% - 1366px/2);
   top: 0px;
   background:#FDD053;
-  
+  font-family: Sora;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0em;
+  text-align: left;
+
   .hover{
     display: flex;
     flex-direction: row;
