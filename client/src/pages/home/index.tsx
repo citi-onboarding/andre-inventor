@@ -1,15 +1,9 @@
 import React from "react";
 import { HomeContainer } from './styles';
-import { lightbulb } from '../../assets';
-import { trophy } from '../../assets';
-import { thought } from '../../assets';
-import { swirl } from '../../assets';
-import { swirlLeft } from '../../assets';
-import { magic_wand } from '../../assets';
-import { megaphone } from '../../assets';
-import { rocket } from '../../assets';
+import { lightbulb, rocket, megaphone, trophy ,thought ,swirl ,swirlLeft, magic_wand, Arrow } from '../../assets';
 import axios from 'axios';
 import { useState, useEffect } from "react";
+import { useSpring, animated } from 'react-spring'
 
 export const Home: React.FC = () => {
     const [data, setData] = useState(null);
@@ -28,15 +22,34 @@ export const Home: React.FC = () => {
         fetchData();
     
       }, []);
+
+
+      const slideDown = useSpring({
+        from: { marginTop: -100 },
+        to: { marginTop: 0 },
+        config: { tension: 200, friction: 20 },
+        loop: { reverse: true },
+      });
     return (
         <HomeContainer>
+            <div style={{ height: 300 }} className = "seta">
+                <animated.img
+                    src={Arrow}
+                    alt="Imagem"
+                    style={{
+                    width: '100%',
+                    height: 'auto',
+                    ...slideDown,
+                    }}
+                />
+            </div>
             
             {data && (
             <>
                 <h1 className="titulo">{data}</h1>
             </>
             )}
-            
+            <h1 className = "titulo">Conectando pessoas através da inteligência criativa</h1>
             <p>Podemos ser <b>cocriadores</b> das nossas ideias<br/>Vem pra cá!</p>
             <img className = "light" src = { lightbulb }/>
             <img className = "trophy" src = { trophy }/>
@@ -46,6 +59,8 @@ export const Home: React.FC = () => {
             <img className = "magic_wand" src = { magic_wand }/>
             <img className = "megaphone" src = { megaphone }/>
             <img className = "rocket" src = { rocket }/>
+            <p className = "rolar">Role para Baixo</p>
+            
         </HomeContainer>
     );
 }

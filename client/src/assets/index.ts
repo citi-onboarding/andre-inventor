@@ -6,6 +6,7 @@ import swirl from './swirl.png';
 import swirlLeft from './swirlLeft.png';
 import trophy from './trophy.png';
 import thought from './thought_bubble.png';
+import Arrow from './Arrow.png'
 
 export {
     lightbulb,
@@ -15,5 +16,6 @@ export {
     swirl,
     swirlLeft,
     trophy,
-    thought
+    thought,
+    Arrow
 };

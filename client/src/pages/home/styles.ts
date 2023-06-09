@@ -81,6 +81,32 @@ export const HomeContainer = styled.div`
   .rocket{
     position: absolute;
     top: 213px;
-    left: 1250px;
+    right:52px;
+  }
+  .seta{
+    position: absolute;
+    left:540px;
+    top: 485px;
+  }
+  .rolar{
+    position: absolute;
+    width: 128px;
+    height: 36px;
+    right: 604.28px;
+    top: 442px;
+
+    font-family: 'Sora';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 36px;
+    /* identical to box height, or 222% */
+
+    display: flex;
+    align-items: center;
+
+    /* Black 40 */
+
+    color: rgba(0, 0, 0, 0.4);
   }
 `;
