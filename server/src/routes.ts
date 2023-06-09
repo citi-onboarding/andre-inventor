@@ -3,12 +3,14 @@ import UserController from '@controllers/UserController'
 import ProjectController from '@controllers/ProjetoController'
 import HomeController from '@controllers/HomeController';
 import AboutMeController from '@controllers/AboutMeController';
+import NodemailerController from '@controllers/nodemailerController';
 
 const routes = express.Router();
 const userController = new UserController();
 const projectController = new ProjectController();
 const homeController = new HomeController();
-const aboutMeController = new AboutMeController()
+const aboutMeController = new AboutMeController();
+const nodemailerController = new NodemailerController();
 
 routes.post('/user', userController.create);
 routes.get('/user', userController.get);
