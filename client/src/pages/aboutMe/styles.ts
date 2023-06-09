@@ -21,6 +21,7 @@ export const AboutMeContainer = styled.div`
         height: 542.9px;
         left:100px;
         top:30px;
+        showIndicators: false;
     }
     h1{
         position: absolute;
