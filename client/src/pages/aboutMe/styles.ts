@@ -28,7 +28,7 @@ export const AboutMeContainer = styled.div`
         top:216px;
     }
     .andre{
-        width : 321px;
+        width : 321hpx;
         height: 436px;
     }
 `;
