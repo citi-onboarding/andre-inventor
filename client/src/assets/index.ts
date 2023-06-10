@@ -1,4 +1,5 @@
 
+import Phone from './ebook_phone.png'
 import lightbulb from './lightbulb.png';
 import magic_wand from './magic_wand.png';
 import megaphone from './megaphone.png';
@@ -18,5 +19,6 @@ export {
     swirlLeft,
     trophy,
     thought,
-    Arrow
+    Arrow,
+    Phone
 };
