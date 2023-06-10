@@ -10,7 +10,7 @@ export const HomeContainer = styled.div`
   text-align: center;
   align-items: center;
   height: 100vh;
-  position: fixed;
+  position: absolute;
   background: linear-gradient(180deg, #FDD053 0%, rgba(253, 208, 83, 0) 100%, white);
   justify-content: center;
 

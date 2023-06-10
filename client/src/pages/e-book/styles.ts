@@ -2,9 +2,11 @@ import styled from 'styled-components';
 
 
 export const EBookContainer = styled.div`
-    position: relative;
+    position: absolute;
+    top: 860px;
     width: 1166px;
     height: 520px;
+    left: 80px;
     margin: auto;
     
     background: linear-gradient(106.76deg, #FDD053 0%, rgba(253, 208, 83, 0.2) 100%);

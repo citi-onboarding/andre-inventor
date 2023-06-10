@@ -8,8 +8,8 @@ import swirl from './swirl.png';
 import swirlLeft from './swirlLeft.png';
 import trophy from './trophy.png';
 import thought from './thought_bubble.png';
-import Arrow from './Arrow.png'
-
+import Arrow from './Arrow.png';
+import LogoAndre from './logoPreto.png';
 export {
     lightbulb,
     magic_wand,
@@ -20,5 +20,6 @@ export {
     trophy,
     thought,
     Arrow,
-    Phone
+    Phone,
+    LogoAndre
 };
