@@ -16,13 +16,7 @@ export const AboutMeContainer = styled.div`
         transform: rotate(-8.71deg);
     }
 
-    .carousel{
-        width: 983px;
-        height: 542.9px;
-        left:100px;
-        top:30px;
-        showIndicators: false;
-    }
+    
     h1{
         position: absolute;
         left:405px;
@@ -31,5 +25,49 @@ export const AboutMeContainer = styled.div`
     .andre{
         width : 321hpx;
         height: 436px;
+    }
+    .retangulo{
+        position: absolute;
+        width: 1496.51px;
+        height: 685.23px;
+        left: -108px;
+        top: -30px;
+        background: linear-gradient(104.64deg, rgba(253, 208, 83, 0.4) 1.99%, #FDD053 85.41%);
+        border-radius: 80px;
+        transform: rotate(-8.71deg);
+    }
+    .balao{
+        position: absolute;
+        left: 310px;
+        top: 191px;
+
+    }
+    h1{
+        position: absolute;
+
+        top: 80px;
+        left: 205px;
+
+        width: 313px;
+        height: 58px;
+
+        font-family: 'Bitcrusher';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 58px;
+        color: #000000;
+        z-index: 1;
+    }
+    .laptop{
+        position: absolute;
+        z-index: 1;
+        top: -90px;
+        right: 300px;
+    }
+    .announce{
+        position: absolute;
+        left: 0px;
+        top: 430px;
     }
 `;
