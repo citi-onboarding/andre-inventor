@@ -4,7 +4,7 @@ import styled from 'styled-components';
 export const AboutMeContainer = styled.div`
     position: absolute;
     top: 1610px;
-    width: 1583px;
+    width: 100vh;
     height: 903.9px;
     .back{
         position: absolute;
@@ -35,6 +35,7 @@ export const AboutMeContainer = styled.div`
         background: linear-gradient(104.64deg, rgba(253, 208, 83, 0.4) 1.99%, #FDD053 85.41%);
         border-radius: 80px;
         transform: rotate(-8.71deg);
+        
     }
     .balao{
         position: absolute;
@@ -63,7 +64,7 @@ export const AboutMeContainer = styled.div`
         position: absolute;
         z-index: 1;
         top: -90px;
-        right: 300px;
+        right: -600px;
     }
     .announce{
         position: absolute;
