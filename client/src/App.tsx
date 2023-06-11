@@ -5,6 +5,7 @@ import { GlobalStyle } from './styles/global';
 import { EBook } from './pages';
 import { NavBar } from './pages';
 import { Home } from './pages';
+import { Footer } from './pages/footer';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <NavBar/>
       <Home/>
       <EBook/>
+      <Footer/>
       <GlobalStyle/>
     </ThemeProvider>
   );

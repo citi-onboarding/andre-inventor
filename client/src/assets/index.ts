@@ -10,6 +10,10 @@ import trophy from './trophy.png';
 import thought from './thought_bubble.png';
 import Arrow from './Arrow.png';
 import LogoAndre from './logoPreto.png';
+import LogoBranco from './logoBranco.png';
+import facebook from './facebook.png';
+import instagram from './instagram.png';
+import citi from './CITi.png'
 export {
     lightbulb,
     magic_wand,
@@ -21,5 +25,9 @@ export {
     thought,
     Arrow,
     Phone,
-    LogoAndre
+    LogoAndre,
+    LogoBranco,
+    instagram,
+    facebook,
+    citi
 };
