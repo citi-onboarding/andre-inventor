@@ -11,6 +11,7 @@ export const ContainerPage = styled.div`
 `;
 
 export const ImageText = styled.p`
+  
     position: absolute;
     width: 247px;
     height: 160px;
@@ -28,12 +29,19 @@ export const ImageText = styled.p`
 `;
 
 export const OutputImage = styled.img`
-  position: absolute;
-  width: 328px;
-  height: 426px;
-  left: 518px;
-  top: 0px;
+    position: absolute;
+    display: flex;
+    left: 518px;
+    top: 0px;
+  
 `;
+export const OutputBaloon = styled.img`
+    position: absolute;
+    left: 135px;
+    top: 150px;
+    border-radius: 0px;
+
+  `;
 
 export const CarouselStyled = styled(Carousel)`
   top: 60px;

@@ -10,7 +10,6 @@ export const AboutMe: React.FC = () => {
             <h1>Conheça André Inventor!</h1>
             <div className= "retangulo"></div>
             <img src={ laptop } className = "laptop" alt="laptop"/>
-            <img src = { balao } className= "balao" alt = "thought_balloon"/>
             <img src= { announce } className= "announce" alt="announcement"/>
             <Carousel/>
         </AboutMeContainer>

@@ -6,6 +6,7 @@ import andre4 from './andre4.png';
 import balao from './balao.png';
 import laptop from './laptop.png'
 import announce from './announcement.png';
+import balao2 from './balao2.png';
 export {
     LogoCITi,
     andre1,
@@ -13,6 +14,7 @@ export {
     andre3,
     andre4,
     balao,
+    balao2,
     laptop,
     announce
 };
