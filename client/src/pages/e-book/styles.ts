@@ -2,12 +2,11 @@ import styled from 'styled-components';
 
 
 export const EBookContainer = styled.div`
+    display: flex;
     position: absolute;
     top: 860px;
     width: 1166px;
     height: 520px;
-    left: 80px;
-    margin: auto;
     
     background: linear-gradient(106.76deg, #FDD053 0%, rgba(253, 208, 83, 0.2) 100%);
     border-radius: 8px;
@@ -93,7 +92,6 @@ export const EBookContainer = styled.div`
         margin: 0 10px;
         
         overflow: hidden;
-        position: absolute;
         &:before{
           content:'';
           position: absolute;
@@ -123,4 +121,11 @@ export const EBookContainer = styled.div`
           }
         }
       }
+`;
+
+export const Container = styled.div`
+
+  display: flex;
+  justify-content: center;
+
 `;
