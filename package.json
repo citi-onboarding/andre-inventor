@@ -1,9 +1,13 @@
 {
   "devDependencies": {
+    "@types/antd": "^1.0.0",
     "@types/node": "^20.2.4"
   },
   "dependencies": {
+    "antd": "^5.7.0",
     "axios": "^1.4.0",
-    "react-material-ui-carousel": "^3.4.2"
+    "flat-carousel": "^0.0.1",
+    "react-material-ui-carousel": "^3.4.2",
+    "react-responsive-carousel": "^3.2.23"
   }
 }

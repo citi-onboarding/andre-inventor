@@ -14,6 +14,9 @@ import LogoBranco from './logoBranco.png';
 import facebook from './facebook.png';
 import instagram from './instagram.png';
 import citi from './CITi.png'
+import dotInactive from './dot-inactive.png';
+import dotActive from './dot-active.png';
+
 export {
     lightbulb,
     magic_wand,
@@ -29,5 +32,7 @@ export {
     LogoBranco,
     instagram,
     facebook,
-    citi
+    citi,
+    dotInactive,
+    dotActive
 };

@@ -6,6 +6,7 @@ import { EBook } from './pages';
 import { NavBar } from './pages';
 import { Home } from './pages';
 import { Footer } from './pages/footer';
+import { AboutMe } from './pages';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <NavBar/>
       <Home/>
       <EBook/>
+      <AboutMe/>
       <Footer/>
       <GlobalStyle/>
     </ThemeProvider>
