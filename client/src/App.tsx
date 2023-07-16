@@ -2,12 +2,13 @@ import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { theme } from './styles/theme';
 import { GlobalStyle } from './styles/global';
-import { EBook } from './pages';
 import { NavBar } from './pages';
 import { Home } from './pages';
-import { Footer } from './pages/footer';
+import { EBook } from './pages';
 import { AboutMe } from './pages';
-import { Projects } from './pages/projects';
+import { Projects } from './pages';
+import { Contact } from './pages';
+import { Footer } from './pages';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <EBook/>
       <AboutMe/>
       <Projects/>
+      <Contact/>
       <Footer/>
       <GlobalStyle/>
     </ThemeProvider>

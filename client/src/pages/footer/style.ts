@@ -2,10 +2,9 @@ import styled from 'styled-components';
 
 
 export const FooterContainer = styled.div`
-    position: absolute;
+    position: relative;
     width: 100%;
     height: 427px;
-    top: 3700px;
     bottom: 0;
     background-color: black;
 `;
