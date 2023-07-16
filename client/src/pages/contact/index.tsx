@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Bac, Buttons, Container, Content, Form, ModalStyle } from './style';
+import axios from 'axios';
+import { arrowR, closeX, errorI, ou, sucess } from '../../assets';
 
 interface ModalProps {
     closeModal: () => void;
@@ -10,7 +12,7 @@ interface ModalProps {
     return (
       <ModalStyle>
         <div className="modal-content">
-          <button className="close" onClick={closeModal}><img width={12} height={12} src='https://i.imgur.com/JwLuhEG.png'/></button>
+          <button className="close" onClick={closeModal}><img width={12} height={12} src={closeX}/></button>
             {children}
         </div>
       </ModalStyle>
@@ -26,17 +28,14 @@ export const Contact: React.FC = () => {
       event.preventDefault();
   
       try {
-        // Simulando o envio do formulário
-        await new Promise<void>((resolve, reject) => {
-          setTimeout(() => {
-            const success = Math.random() < 0.5; // Simula sucesso ou falha aleatória
-            if (success) {
-              resolve();
-            } else {
-              reject();
-            }
-          }, 2000); // Tempo simulado de envio do formulário
+        const formData = new FormData(event.currentTarget);
+        
+        const payload: { [key: string]: string } = {};
+        formData.forEach((value, key) => {
+          payload[key] = value.toString();
         });
+
+        await axios.post('http://localhost:3001/email', payload);
   
         setSuccessModalOpen(true);
       } catch (error) {
@@ -54,7 +53,7 @@ export const Contact: React.FC = () => {
 
   return (
     <Container>
-      <h3>Quer saber mais sobre André Inventor?</h3>
+      <h3 id='contact'>Quer saber mais sobre André Inventor?</h3>
 
       <Content>
       <Buttons>
@@ -62,27 +61,27 @@ export const Contact: React.FC = () => {
           <button>Ver Depoimentos</button>
           <button>3i Instituto Ideias e Ideais</button>
         </Buttons>
-        <img alt='' style={{marginTop: 100, marginLeft: 45, marginRight: 45}} width={27} height={310} src='https://i.imgur.com/lHZYhKh.png'/>
+        <img alt='' style={{marginTop: 100, marginLeft: 45, marginRight: 45}} width={27} height={310} src={ou}/>
         <Form>
           <h1>
             Fale comigo!
           </h1>
           <form onSubmit={handleSubmit}>
             <div>
-              <input type="text" id="nomeid" placeholder="Nome" name="nome" />
+              <input type="text" id="name" required placeholder="Nome" name="name" />
             </div>
             <div>
-              <input style={{marginRight: 30}} type="email" id="emailid" placeholder="E-mail" name="email" />
-              <input type="tel" id="foneid" placeholder="Telefone" name="fone" />
+              <input style={{marginRight: 30}} type="email" id="email" placeholder="E-mail" name="email" />
+              <input type="tel" id="phone" placeholder="Telefone" name="phone" />
             </div>
             <div>
-              <textarea placeholder="Motivo do contato"></textarea>
+              <textarea id="message" required name='message' placeholder="Motivo do contato"></textarea>
             </div>
-            <button style={{marginLeft: 590}} type="submit">Enviar<img alt='' style={{marginLeft: 5}} src='https://i.imgur.com/orK9e53.png'/></button>
+            <button style={{marginLeft: 590}} type="submit">Enviar<img alt='' style={{marginLeft: 5}} src={arrowR}/></button>
         </form>
         {successModalOpen && (
           <Modal closeModal={closeSuccessModal}>
-            <img width={41} alt='' src='https://i.imgur.com/01kuhCJ.png'/>
+            <img width={41} alt='' src={sucess}/>
             <div className='mdal'>
               <h1>O formulário foi enviado com sucesso!</h1>
               <p>Em breve André Inventor entrará em contato com você.</p>
@@ -92,10 +91,10 @@ export const Contact: React.FC = () => {
 
         {errorModalOpen && (
           <Modal closeModal={closeErrorModal}>
-            <img width={41} alt='' src='https://i.imgur.com/c2QMGe8.png'/>
+            <img width={41} alt='' src={errorI}/>
             <div className='mdal'>
-              <h1>Falha!</h1>
-              <p>Houve uma falha ao tentar enviar o formulário. Tente novamente.</p>
+              <h1>Aconteceu um erro!</h1>
+              <p>Aconteceu um erro ao tentar enviar o formulário. Tente novamente.</p>
             </div>
           </Modal>
         )}

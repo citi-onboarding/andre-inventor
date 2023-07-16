@@ -1,5 +1,5 @@
 import React from "react";
-import { FooterContainer, Branco, Content, Div, Img } from "./style";
+import { FooterContainer, White, Content, Div, Img } from "./style";
 import { instagram, facebook, LogoBranco, citi } from '../../assets';
 
 export const Footer: React.FC = () => {
@@ -16,7 +16,7 @@ export const Footer: React.FC = () => {
                 <a target="_blank" href = 'https://www.facebook.com/andre.freire.3551/' rel="noreferrer"><img src={ facebook } alt="facebook_logo"/></a>
                 </Img>
             </Content>
-            <Branco>
+            <White>
                     Made with
                     {' '}
                     <strong >&lt; &#x0002F; &gt;</strong>
@@ -27,7 +27,7 @@ export const Footer: React.FC = () => {
                     {' '}
                     by 
                 <img style={{marginLeft: '10px'}} src={ citi } alt="logo_citi"/>
-            </Branco>
+            </White>
         </FooterContainer>
     );
 }
