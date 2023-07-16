@@ -11,8 +11,10 @@ export const EBookContainer = styled.div`
     background: linear-gradient(106.76deg, #FDD053 0%, rgba(253, 208, 83, 0.2) 100%);
     border-radius: 8px;
 
+    flex-direction: row;
+
     h1{
-        position: relative;
+
         width: 245px;
         height: 72px;
 
@@ -21,28 +23,10 @@ export const EBookContainer = styled.div`
         font-weight: 700;
         font-size: 60px;
         line-height: 72px;
-        left:494px;
-        top: 64px;
         color: #000000;
     }
-    h2{
-        position: absolute;
-        width: 367px;
-        height: 30px;
-        
-        font-family: 'Sora';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 24px;
-        line-height: 30px;
-        left:494px;
-        top: 136px;
-        color: rgba(0, 0, 0, 0.6);
-    }
+
     p{
-        position: absolute;
-        left: 494px;
-        top: 190px;
         width: 573px;
         height: 180px;
 
@@ -54,78 +38,70 @@ export const EBookContainer = styled.div`
 
         color: #000000;
     }
-    a{
-        position: absolute;
-        left: 546px;
-        top:412px;
-
-        font-family: 'Sora';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 20px;
-        line-height: 25px;
-        color: rgba(0, 0, 0, 0.8);
-        z-index: 1;
-    }
+    
     img{
-        position: absolute;
         width: 515px;
         height: 515px;
 
     }
-    .hover{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        background: linear-gradient(106.76deg, rgba(255, 255, 255, 0.2) 0%, #FFFFFF 100%);
-        box-shadow: 0px 0.81px 3.25px rgba(0, 0, 0, 0.06);
-        border-radius: 8px;
-      }
       
-      .btn{
-        line-height: 25px;
-        list-style: none;
-        color: #000000;
-        text-align: center;
-        padding:18px 52px;
-        text-decoration: none;
-        margin: 0 10px;
-        
-        overflow: hidden;
-        &:before{
-          content:'';
-          position: absolute;
-          top: 0%;
-          right: 0%;
-    
-          width:100%;
-          height:100%;
-          background: linear-gradient(106.76deg, rgba(255, 255, 255, 0.2) 0%, #FFFFFF 100%);
-          box-shadow: 0px 0.81px 3.25px rgba(0, 0, 0, 0.06);
-          border-radius: 8px;
-    
-          z-index: -1;
-          transition: .3s ease;
-        }
-      }
-    
-      .b1{
-        &:before{
-          width: 0;
-          height: 100%;
-        }
-        &:hover{
-        color: rgba(0, 0, 0, 0.8);
-          &:before{
-            width: 100%;
-          }
-        }
-      }
 `;
 
 export const Container = styled.div`
 
   display: flex;
   justify-content: center;
+
+`;
+
+export const SideOne = styled.div`
+
+`;
+
+export const SideTwo = styled.div`
+
+  display: flex;
+  flex-direction: column;
+  padding-top: 75px;
+  padding-bottom: 75px;
+  padding-right: 75px;
+
+  h2 {
+      margin: 0;
+      padding-bottom: 25px;
+      font-family: 'Sora';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 30px;
+      color: rgba(0, 0, 0, 0.6);
+  }
+
+  button {
+    border-radius: 8px;
+    background: var(--degrad-boto-2, linear-gradient(135deg, rgba(253, 208, 83, 0.20) 0%, #FDD053 100%));
+    box-shadow: 0px 0.8100000023841858px 3.25px 0px rgba(0, 0, 0, 0.06);
+    border: none;
+    width: 277px;
+    height: 62px;
+
+    color: black;
+    font-family: Sora;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    margin-top: 25px;
+
+    transition: 0.5s;
+  }
+
+  button:hover {
+    color: white;
+    border-radius: 8px;
+    background: var(--degrad-boto-3, linear-gradient(135deg, #FDD053 0%, rgba(253, 208, 83, 0.20) 100%));
+    box-shadow: 0px 0.8100000023841858px 3.25px 0px rgba(0, 0, 0, 0.06);
+  }
 
 `;

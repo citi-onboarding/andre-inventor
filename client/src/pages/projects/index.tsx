@@ -4,14 +4,15 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import './styles.css';
 import { Container, Teste } from './style';
 
-import { dotInactive, dotActive } from '../../assets';
+import { dotInactive, dotActive, arrow1, arrow2 } from '../../assets';
 
 
 export const Projects: React.FC = () => {
   return (
     <Container>
-            <h3>Nossos projetos</h3>
+            <h3 id='projects'>Nossos projetos</h3>
             <Carousel 
+            autoPlay
             showThumbs={false} showStatus={false}
             showIndicators={false}
             className="carousel-root2"
@@ -28,14 +29,14 @@ export const Projects: React.FC = () => {
             renderArrowPrev={(onClickHandler, hasPrev, label) =>
             hasPrev && (
                 <button type="button" onClick={onClickHandler} title={label} className="carousel-arrow-prev">
-                <img width={40} height={30} src="https://i.imgur.com/X8OrIst.png" alt="Seta para a esquerda" />
+                <img width={40} height={30} src={arrow1} alt="Seta para a esquerda" />
                 </button>
             )
             }
             renderArrowNext={(onClickHandler, hasNext, label) =>
             hasNext && (
                 <button type="button" onClick={onClickHandler} title={label} className="carousel-arrow-next2">
-                <img width={40} height={30} src="https://i.imgur.com/n0CLB2W.png" alt="Seta para a direita" />
+                <img width={40} height={30} src={arrow2} alt="Seta para a direita" />
                 </button>
             )
             }

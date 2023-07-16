@@ -9,7 +9,7 @@ export const FooterContainer = styled.div`
     background-color: black;
 `;
 
-export const Branco = styled.div`
+export const White = styled.div`
     position: absolute;
     bottom: 0;
     width: 100%;

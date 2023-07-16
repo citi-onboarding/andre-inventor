@@ -14,7 +14,7 @@ export const Container = styled.div`
 
 `;
 
-export const Teste = styled.div`
+export const Content = styled.div`
     display: flex;
     position: absolute;
     flex-direction: column;

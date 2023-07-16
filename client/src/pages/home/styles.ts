@@ -5,7 +5,7 @@ export const HomeContainer = styled.div`
   display:flex;
   flex-direction: column;
   font-family: 'Sora', sans-serif;
-  width: 100vw;
+  width: 100%;
   top: 130px;
   text-align: center;
   align-items: center;
@@ -23,14 +23,13 @@ export const HomeContainer = styled.div`
     color: #000000;
   }
   .titulo{
-    max-width: 770px;
     font-family: 'Bitcrusher', sans-serif;
     position: relative;
     text-align: center;
+    padding-bottom: 25px; 
   }
   p{
     position: relative;
-    top: 30px;
     font-style: normal;
     font-weight: 600;
     font-size: 24px;
@@ -89,24 +88,28 @@ export const HomeContainer = styled.div`
     top: 485px;
   }
   .rolar{
-    position: absolute;
-    width: 128px;
-    height: 36px;
-    right: 604.28px;
-    top: 442px;
 
     font-family: 'Sora';
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
     line-height: 36px;
-    /* identical to box height, or 222% */
-
-    display: flex;
-    align-items: center;
-
-    /* Black 40 */
 
     color: rgba(0, 0, 0, 0.4);
+
+    margin-top: 50px;
   }
+`;
+
+export const Text = styled.div`
+
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    width: 770px;
+
+    @media (max-width: 1400px) {
+      margin-top: 150px;
+    }
+
 `;
