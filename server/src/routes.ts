@@ -3,14 +3,14 @@ import UserController from '@controllers/UserController'
 import ProjectController from '@controllers/ProjetoController'
 import HomeController from '@controllers/HomeController';
 import AboutMeController from '@controllers/AboutMeController';
-import NodemailerController from '@controllers/nodemailerController';
+import { SendMail } from '@controllers/MailController';
 
 const routes = express.Router();
 const userController = new UserController();
 const projectController = new ProjectController();
 const homeController = new HomeController();
 const aboutMeController = new AboutMeController();
-const nodemailerController = new NodemailerController();
+
 
 routes.post('/user', userController.create);
 routes.get('/user', userController.get);
@@ -31,6 +31,8 @@ routes.post('/aboutMe', aboutMeController.create);
 routes.get('/aboutMe', aboutMeController.get);
 routes.delete('/aboutMe/:id',aboutMeController.delete);
 routes.put('/aboutMe/:id',aboutMeController.update);
+
+routes.post('/email', SendMail);
 
 
 export default routes;
