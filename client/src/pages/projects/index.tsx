@@ -1,13 +1,26 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import './styles.css';
 import { Container, Teste } from './style';
+import axios from 'axios';
 
 import { dotInactive, dotActive, arrow1, arrow2 } from '../../assets';
 
 
 export const Projects: React.FC = () => {
+
+    const [carouselData, setCarouselData] = useState([]);
+
+  useEffect(() => {
+    axios.get('http://localhost:3001/projects')
+      .then(response => {
+        setCarouselData(response.data.Projetos);
+      })
+      .catch(error => {
+        console.error('Erro ao obter dados do índice:', error);
+      });
+  }, []);
   return (
     <Container>
             <h3 id='projects'>Nossos projetos</h3>
@@ -41,34 +54,14 @@ export const Projects: React.FC = () => {
             )
             }
         >
-            <div className='two'>
-                <img width={470} height={273} className='slide2' src="https://i.imgur.com/NRNMi4R.png" alt="Imagem 1" />
-                <h4>Pista com obstáculos</h4>
-                <p className='caption'>Visando o bem estar e melhoria da saúde dos recifenses, desenvolvi, em 1999, uma ideia a ser consolidada na cidade: a Pista com Obstáculos. A invenção consistia em uma pista de corrida/caminhada com alguns obstáculos que
-                iriam necessitar de mais esforços dos usuários para serem transpostos; os exercícios aeróbicos, que são grandes aliados para...</p>
-                <a className='link' href="url">Ler mais</a>
-            </div>
-            <div>
-            <img width={470} height={273} className='slide2' src="https://i.imgur.com/NRNMi4R.png" alt="Imagem 1" />
-                <h4>Pista com obstáculos</h4>
-                <p className='caption'>Visando o bem estar e melhoria da saúde dos recifenses, desenvolvi, em 1999, uma ideia a ser consolidada na cidade: a Pista com Obstáculos. A invenção consistia em uma pista de corrida/caminhada com alguns obstáculos que
-                iriam necessitar de mais esforços dos usuários para serem transpostos; os exercícios aeróbicos, que são grandes aliados para...</p>
-                <a className='link' href="url">Ler mais</a>
-            </div>
-            <div>
-            <img width={470} height={273} className='slide2' src="https://i.imgur.com/NRNMi4R.png" alt="Imagem 1" />
-                <h4>Pista com obstáculos</h4>
-                <p className='caption'>Visando o bem estar e melhoria da saúde dos recifenses, desenvolvi, em 1999, uma ideia a ser consolidada na cidade: a Pista com Obstáculos. A invenção consistia em uma pista de corrida/caminhada com alguns obstáculos que
-                iriam necessitar de mais esforços dos usuários para serem transpostos; os exercícios aeróbicos, que são grandes aliados para...</p>
-                <a className='link' href="url">Ler mais</a>
-            </div>
-            <div>
-            <img width={470} height={273} className='slide2' src="https://i.imgur.com/NRNMi4R.png" alt="Imagem 1" />
-                <h4>Pista com obstáculos</h4>
-                <p className='caption'>Visando o bem estar e melhoria da saúde dos recifenses, desenvolvi, em 1999, uma ideia a ser consolidada na cidade: a Pista com Obstáculos. A invenção consistia em uma pista de corrida/caminhada com alguns obstáculos que
-                iriam necessitar de mais esforços dos usuários para serem transpostos; os exercícios aeróbicos, que são grandes aliados para...</p>
-                <a className='link' href="url">Ler mais</a>
-            </div>
+            {carouselData.map((item: any) => (
+                <div className='two' key={item.id}>
+                <img width={470} height={273} className='slide2' src={item.image} alt={item.title} />
+                <h4>{item.title}</h4>
+                <p className="caption">{item.description}</p>
+                <a className='link' href={item.link}>Ler mais</a>
+                </div>
+      ))}
         </Carousel>
     </Container>
   );
