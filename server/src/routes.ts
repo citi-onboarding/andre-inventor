@@ -1,6 +1,6 @@
 import express from 'express';
 import UserController from '@controllers/UserController';
-import ProjectController from '@controllers/ProjetoController';
+import ProjectController from '@controllers/ProjectsController';
 import HomeController from '@controllers/HomeController';
 import AboutMeController from '@controllers/AboutMeController';
 import { SendMail } from '@controllers/MailController';

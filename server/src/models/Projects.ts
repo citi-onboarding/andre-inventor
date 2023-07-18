@@ -1,7 +1,7 @@
 import { Entity, PrimaryGeneratedColumn, Column } from "typeorm"
 
 @Entity()
-export class Project{
+export class Projeto{
 
     @PrimaryGeneratedColumn()
     id: number
@@ -11,6 +11,9 @@ export class Project{
 
     @Column()
     description: string
+
+    @Column()
+    link: string
 
     @Column()
     image: string
